@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.w3.org./1999/xhtml">
+<head th:replace="common/header :: common-header" />
+
+
+<body class="d-flex flex-column" >
+  <div th:replace="common/header :: navbar"> </div>
+
+  
+  <div class="jumbotron jumbotron-fluid mt-0" th:style="'background-image: url(/image/background/adidas-background.jpg);'">
+  	<div class="container">
+      <div class="row text-left py-5">   
+         <div class="col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-3 col-xl-6 offset-xl-6 my-auto">  
+            <h2 class="bg-warning text-dark d-inline-block p-1">Government of India</h2>
+            <h1 class="font-weight-bold">Truth is powerful and it prevails</h1>
+            <a th:href="@{/store}" class="btn btn-primary rounded-pill" data-addclass-on-xs="btn-sm">Know about articles</a>       
+          </div> 
+      </div>
+  </div>
+  </div>  
+   
+  
+  <section class="section py-5 ">
+    <div class="container text-center">
+      <h4 class="font-weight-bold ">Emergency Helplines</h4>
+        
+        </div>
+    </div>
+  </section>
+  
+  
+   <!-- start section -->
+  <section class="section py-5 bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 mb-2">
+          <div class="text-center features-card">
+            <i data-feather="child" class="text-info"></i>
+            <h5>Child abbuse</h5>
+            <p>For an type of child safety and protection : dial 1098</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 mb-2">
+          <div class="text-center features-card">
+            <i data-feather="user" class="text-info"></i>
+            <h5>Women Harassment</h5>
+            <p>for physical stalking, domestic violence, dowry harassment : dial 1090</p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 mb-2">
+          <div class="text-center features-card">
+            <i data-feather="gift" class="text-info"></i>
+            <h5>Cyber crimes</h5>
+            <p>Victims of cyber fraud can call on helpline number: 155260</p>
+          </div>
+        </div>        
+      </div>
+    </div> <!-- end container -->
+  </section> <!-- end section -->
+  
+
+   
+  
+  <div th:replace="common/header :: footer"> </div>  
+  <div th:replace="common/header :: body-scripts"> </div>
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.featured-items').slick({
+    	  infinite: true,
+    	  slidesToShow: 4,
+    	  slidesToScroll: 4,
+    	  responsive: [
+    	    {
+    	      breakpoint: 1200,
+    	      settings: {
+    	        slidesToShow: 3,
+    	        slidesToScroll: 3,
+    	      }
+    	    },
+    	    {
+    	      breakpoint: 768,
+    	      settings: {
+    	        slidesToShow: 2,
+    	        slidesToScroll: 2
+    	      }
+    	    },
+    	    {
+    	      breakpoint: 480,
+    	      settings: {
+    	        slidesToShow: 1,
+    	        slidesToScroll: 1
+    	      }
+    	    }    	    
+    	  ]
+      })
+      .on('setPosition', function (event, slick) {
+		slick.$slides.css('height', slick.$slideTrack.height() + 'px');
+	});
+      $('.featured-brands').slick({
+    	  slidesToShow: 6,
+    	  slidesToScroll: 1,
+    	  responsive: [
+      	    {
+      	      breakpoint: 1200,
+      	      settings: {
+      	        slidesToShow: 5,
+      	        slidesToScroll: 1,
+      	      }
+      	    },
+      	    {
+      	      breakpoint: 992,
+      	      settings: {
+      	        slidesToShow: 4,
+      	        slidesToScroll: 4
+      	      }
+      	    },
+      	    {
+      	      breakpoint: 768,
+      	      settings: {
+      	        slidesToShow: 3,
+      	        slidesToScroll: 3
+      	      }
+      	    },
+      	  	{
+      	      breakpoint: 550,
+      	      settings: {
+      	        slidesToShow: 2,
+      	        slidesToScroll: 2
+      	      }
+      	    },
+      	  	{
+      	      breakpoint: 380,
+      	      settings: {
+      	        slidesToShow: 1,
+      	        slidesToScroll: 1
+      	      }
+      	    }, 
+      	  ]
+      });
+    });
+  </script>
+</body>
+</html>
